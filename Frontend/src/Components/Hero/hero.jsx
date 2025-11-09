@@ -5,10 +5,9 @@ import hero_image from "../../assets/hero_image.png";
 import hero_image_back from "../../assets/hero_image_back.png";
 import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
+import LoginPopup from "../Loginpopup/LoginPopup";
 
 const Hero = () => {
-
-  
   return (
     <div className="hero">
       <div className="blur hero-blur"></div>
@@ -16,8 +15,7 @@ const Hero = () => {
         <Header />
         {/* the best ad */}
         <div className="the-best-ad">
-          <div
-  ></div>
+          <div></div>
           <span>The best fitness club in town</span>
         </div>
         {/* Hero heading */}
@@ -59,7 +57,9 @@ const Hero = () => {
         </div>
       </div>
       <div className="right-h">
-        <button className="btn">Join Now</button>
+        <button onClick={() => setShowLogin(true)} className="btn">
+          Join Now
+        </button>
         <div className="heart-rate">
           <img src={Heart} alt="" />
           <span>Heart Rate</span>
