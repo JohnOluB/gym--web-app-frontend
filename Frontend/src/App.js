@@ -6,17 +6,24 @@ import Programs from "./Components/Programs/programs";
 import Reasons from "./Components/Reasons/Reasons";
 import Testimonials from "./Components/Testimonials";
 import Footer from "./Components/Footer/Footer";
+import LoginPopup from "./Components/Loginpopup/loginpopup";
+
 function App() {
+  const [showLogin, setShowLogin] = useSate(false);
+
   return (
-    <div className="App">
-      <Hero />
-      <Programs />
-      <Reasons />
-      <Plans />
-      <Testimonials />
-      <Join />
-      <Footer />
-    </div>
+    <>
+      {showLogin ? <LoginPopup /> : <></>}
+      <div className="App">
+        <Hero />
+        <Programs />
+        <Reasons />
+        <Plans />
+        <Testimonials />
+        <Join />
+        <Footer />
+      </div>
+    </>
   );
 }
 
